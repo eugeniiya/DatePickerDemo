@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ xmlns:local="clr-namespace: DatePickerDemo "
+ x:Class="DatePickerDemo.MainPage"
+ BackgroundColor="AliceBlue">
+    
+    <StackLayout Margin="10">
+        <Label Text="Дни между датами"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="Black"
+               Style="{DynamicResource TitleStyle}"
+               Margin="0, 20"
+               HorizontalTextAlignment="Center" />
+        <Label Text="Начальная дата:"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="RoyalBlue"/>     
+        <DatePicker x:Name="startDatePicker"
+                    Format="D"
+                    Margin="30, 0, 0, 30"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    DateSelected="OnDateSelected" />
+        <Label Text="Конечная дата:"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="Blue"/>
+        <DatePicker x:Name="endDatePicker"
+                    MinimumDate="{Binding Source={x:Reference startDatePicker},
+                    Path=Date}"
+                    Format="D"
+                    Margin="30, 0, 0, 30"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    DateSelected="OnDateSelected" />
+        <StackLayout Orientation="Horizontal"
+                     Margin="0, 0, 0, 30">
+            <Label Text="Количество дней между датами: "
+                   VerticalOptions="Center"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="CadetBlue"/>
+            <Switch x:Name="includeSwitch"
+                    Toggled="OnSwitchToggled" />
+        </StackLayout>
+        <Label x:Name="resultLabel"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center" 
+               FontSize="80"
+               TextColor="Black"/>
+    </StackLayout>
+</ContentPage>
