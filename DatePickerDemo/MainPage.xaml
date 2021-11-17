@@ -45,7 +45,8 @@
                    FontAttributes="Bold"
                    TextColor="CadetBlue"/>
             <Switch x:Name="includeSwitch"
-                    Toggled="OnSwitchToggled" />
+                    Toggled="OnSwitchToggled"
+                    ThumbColor="Blue"/>
         </StackLayout>
         <Label x:Name="resultLabel"
                FontAttributes="Bold"
