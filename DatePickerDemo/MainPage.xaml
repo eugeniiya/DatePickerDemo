@@ -53,5 +53,10 @@
                HorizontalTextAlignment="Center" 
                FontSize="80"
                TextColor="Black"/>
+        <Label Text="Ханаока Инна"
+                   VerticalOptions="Center"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
     </StackLayout>
 </ContentPage>
